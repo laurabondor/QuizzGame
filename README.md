@@ -27,15 +27,24 @@ Questions, along with their multiple-choice options, are stored an SQLite databa
 
 ## How to Run
 
-1. Start the Server:
+1. Compile the Server and Client:
+
++ Before running the server and clients, compile the source code files.
+```bash
+gcc -o quizzgame_server server.c -pthread -lsqlite3
+gcc -o quizzgame_client client.c
+```
++ Ensure that the necessary dependencies, such as the SQLite library, are installed.
+
+2. Start the Server:
 
 + Open a terminal and navigate to the server directory.
-+ Run the server using the following command:
++ Run the compiled server using the following command:
 ```bash
 ./quizzgame_server
 ```
 + The server will start and await incoming client connections.
-
+  
 2. Connect Clients:
 
 + Clients can connect to the server using the IP address 127.0.0.1 and port 2908.
